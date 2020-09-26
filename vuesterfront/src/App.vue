@@ -1,13 +1,22 @@
 <template>
   <div id="app">
     <div id="nav">
-<!--      <router-link to="/">Home</router-link> |-->
-<!--      <router-link to="/about">About</router-link>-->
+      <Header/>
+      <Home/>
     </div>
-    <router-view/>
   </div>
 </template>
-
+<script>
+    import Home from "./views/Home";
+    import Header from "./components/core/block/Home/Header";
+    export default {
+        name: 'App',
+      components: {
+            Home,
+            Header
+        }
+    }
+</script>
 <style lang="stylus">
 #app
   font-family Avenir, Helvetica, Arial, sans-serif
@@ -15,5 +24,4 @@
   -moz-osx-font-smoothing grayscale
   text-align center
   color #2c3e50
-  margin-top 60px
 </style>
